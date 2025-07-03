@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP: Dubai Real Estate Investment Roadshow</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212; /* Very dark background for depth */
+            color: #e0e0e0; /* Light gray text for contrast */
+            /* Background image styles */
+            background-image: url('https://placehold.co/1920x1080/000000/FFFFFF/png?text=Dubai+Skyline'); /* Placeholder for Dubai image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Ensures image stays fixed during scroll */
+            position: relative; /* Needed for overlay */
+        }
+        /* Overlay to darken background image and improve text readability */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+            z-index: -1; /* Place behind content */
+        }
+        .loading-spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid #fff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -20px;
+            margin-left: -20px;
+            z-index: 10;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8">
+    <!-- Loading Spinner -->
+    <div id="loading" class="loading-spinner"></div>
+
+    <div id="content" class="bg-gray-950 p-6 sm:p-8 md:p-10 lg:p-12 rounded-xl shadow-2xl max-w-3xl w-full text-center border border-gray-800 opacity-0 transition-opacity duration-500">
+        <!-- Header Section -->
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-100 mb-4 sm:mb-6 leading-tight">
+            Exclusive Invitation: Dubai Real Estate Investment Roadshow
+        </h1>
+        <p class="text-lg sm:text-xl text-gray-400 mb-6 sm:mb-8">
+            Hosted by <span class="font-semibold text-sky-300">H.O.M.E Properties</span> in partnership with <span class="font-semibold text-sky-300">DANUBE</span>, one of Dubai’s most prestigious developers.
+        </p>
+
+        <!-- Event Details Section -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 sm:mb-10 text-left">
+            <div class="bg-gray-900 p-4 rounded-lg flex items-center justify-center flex-col border border-gray-800">
+                <p class="text-sm font-medium text-gray-400 uppercase">Venue</p>
+                <p class="text-base sm:text-lg font-semibold text-gray-100">📍 NH Johannesburg Sandton Hotel</p>
+            </div>
+            <div class="bg-gray-900 p-4 rounded-lg flex items-center justify-center flex-col border border-gray-800">
+                <p class="text-sm font-medium text-gray-400 uppercase">Dates</p>
+                <p class="text-base sm:text-lg font-semibold text-gray-100">📅 5th & 6th July 2025</p>
+            </div>
+            <div class="bg-gray-900 p-4 rounded-lg flex items-center justify-center flex-col border border-gray-800">
+                <p class="text-sm font-medium text-gray-400 uppercase">Time</p>
+                <p class="text-base sm:text-lg font-semibold text-gray-100">⏰ 10:00 AM – 7:00 PM</p>
+            </div>
+        </div>
+
+        <!-- Key Benefits Section -->
+        <p class="text-base sm:text-lg text-gray-300 mb-6 text-left">
+            At this special event, you’ll gain <span class="font-semibold text-sky-300">first-hand insights into premium investment opportunities</span> in Dubai’s booming property market—all from the comfort of your city.
+        </p>
+
+        <ul class="list-none space-y-3 mb-8 sm:mb-10 text-left">
+            <li class="flex items-start">
+                <span class="text-emerald-400 mr-3 text-xl">✅</span>
+                <p class="text-base sm:text-lg text-gray-100">Meet me in person and discuss your investment goals</p>
+            </li>
+            <li class="flex items-start">
+                <span class="text-emerald-400 mr-3 text-xl">✅</span>
+                <p class="text-base sm:text-lg text-gray-100">Learn how to secure properties in Dubai starting from just <span class="font-bold text-emerald-500">USD 100,000</span></p>
+            </li>
+            <li class="flex items-start">
+                <span class="text-emerald-400 mr-3 text-xl">✅</span>
+                <p class="text-base sm:text-lg text-gray-100">Explore <span class="font-bold text-sky-300">1% flexible payment plans</span> tailored to your budget</p>
+            </li>
+            <li class="flex items-start">
+                <span class="text-emerald-400 mr-3 text-xl">✅</span>
+                <p class="text-base sm:text-lg text-gray-100">Discover how Dubai offers up to <span class="font-bold text-emerald-500">8-10% rental ROI</span>, <span class="font-bold text-rose-500">0% capital gains tax</span>, and <span class="font-bold text-rose-500">no property tax</span></p>
+            </li>
+            <li class="flex items-start">
+                <span class="text-emerald-400 mr-3 text-xl">✅</span>
+                <p class="text-base sm:text-lg text-gray-100">Get exclusive launch deals and discounts available only during the event</p>
+            </li>
+        </ul>
+
+        <p class="text-base sm:text-lg text-gray-300 mb-8 text-left">
+            Whether you're looking for <span class="font-semibold text-sky-300">luxury living</span>, <span class="font-semibold text-sky-300">rental income</span>, or <span class="font-semibold text-sky-300">long-term capital appreciation</span>, this event is the perfect getaway to start investing in Dubai’s thriving market.
+        </p>
+
+        <!-- RSVP Call to Action -->
+        <div class="bg-gray-900 p-5 sm:p-6 rounded-lg shadow-md mb-8 sm:mb-10 border border-gray-800">
+            <p class="text-xl sm:text-2xl font-bold text-gray-100 mb-4">Seats are limited, so please RSVP today to secure your spot!</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="mailto:rajeshwari@homepropertiesdxb.com" class="bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                    📩 Simply Reply to this Email
+                </a>
+                <a href="https://wa.me/971501378020" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                    WhatsApp Me: +971 50 137 8020
+                </a>
+            </div>
+        </div>
+
+        <!-- Closing and Contact Information -->
+        <p class="text-base sm:text-lg text-gray-300 mb-6">
+            I look forward to welcoming you at NH Johannesburg Sandton Hotel and helping you take the first step toward owning a property in Dubai.
+        </p>
+
+        <div class="text-gray-400 text-sm sm:text-base">
+            <p class="font-semibold">Regards,</p>
+            <p class="font-bold text-gray-100 text-lg sm:text-xl">Rajeshwari Madhavan</p>
+            <p class="text-gray-300">Property Consultant</p>
+            <p>Email: <a href="mailto:rajeshwari@homepropertiesdxb.com" class="text-sky-400 hover:underline">rajeshwari@homepropertiesdxb.com</a></p>
+            <p>Ph: <a href="tel:+971501378020" class="text-sky-400 hover:underline">+971 50 137 8020</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Get the content div and loading spinner
+        const contentDiv = document.getElementById('content');
+        const loadingSpinner = document.getElementById('loading');
+
+        // Create a new image object
+        const img = new Image();
+        // Set the source to the background image URL
+        img.src = 'https://placehold.co/1920x1080/000000/FFFFFF/png?text=Dubai+Skyline'; // Replace with a real Dubai image URL
+
+        // When the image loads, hide the spinner and show the content
+        img.onload = () => {
+            loadingSpinner.style.display = 'none';
+            contentDiv.style.opacity = '1';
+        };
+
+        // If there's an error loading the image, still hide spinner and show content
+        img.onerror = () => {
+            console.error("Failed to load background image. Displaying content without it.");
+            loadingSpinner.style.display = 'none';
+            contentDiv.style.opacity = '1';
+        };
+    </script>
+</body>
+</html>
